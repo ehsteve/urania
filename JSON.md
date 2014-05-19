@@ -1,24 +1,17 @@
-
-JSON-Urania
-========
+# JSON-Urania
 
 |Author| Steven Christe|
 |-------| --------------|
 |Last Updated | May 17, 2014 |
 | Version | 0.1 (draft)
 
-This documents describes a standard for the interchange of astronomy data. It describes a 
-standard Web API as well as the data output (in JSON).
+This documents describes the Urania standard for data response as implemented in [JSON](http://json.org)
+(Javascript Object Notation) format. A JSON Schema must also be provided.
 
-=======
+## Data Response
 
-Data Response
-=================
 
-Time Series Data
-----------------
-
-All data can be returned in a [JSON](http://json.org) (Javascript Object Notation) format along with a [JSON Schema](http://json-schema.org). A JSON Schema provides a contract for the JSON data required by a given application, and how that data can be modified. XML responses are also supported.
+### Time Series Data
 
 Here is the format for a response.
 
@@ -57,8 +50,7 @@ Here is the format for a response.
         * `dateTime` - String value which encodes the date and time of the measurement. These strings are formatted as "%Y/%M/%D %H:%M:%S" (for example "2013-03-05 23:24.24.105").
         * `value` - The value for the given time given in the format given by `type`.
         
-Metadata
---------
+## Metadata
 
 The response to a metadata request is as simple as possible. Here is the format for a response.
 
